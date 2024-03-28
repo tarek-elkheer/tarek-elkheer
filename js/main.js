@@ -91,7 +91,7 @@ $(".progress-bar__fill").css("background-color","white")
 
 
     $(window).on("scroll",function() {
-        console.log($(this).scrollTop())
+
         if ($(this).scrollTop() > 152 && $(this).width() < 1272) {
             $(".LOGO").hide( )
             $("nav").css({"position":"sticky","z-index":"999999","top" : "0", 
@@ -111,7 +111,6 @@ $(".progress-bar__fill").css("background-color","white")
         if ($(this).scrollTop() > 53 && !$(this).width() < 759 ) {
             $("#contact-now").css("visibility",'visible')
         }
-        console.log($(this).width())
         if ($(this).scrollTop() < 53  &&  !$(this).width() < 759 ) {
             $("#contact-now").css("visibility",'hidden')
         }
@@ -136,7 +135,7 @@ $(".progress-bar__fill").css("background-color","white")
             if ($(window).width() < 759) {
                 $(this).attr("data-triggerd",'false')
                 $(this).parent().animate({
-                    left: -642 
+                    left: -$('#contact-now').width()  + (-10+$("#contactNW").width())
                 },200, function(){
                     
                     $(this).css("flex-direction",'row')
@@ -145,9 +144,13 @@ $(".progress-bar__fill").css("background-color","white")
             else {
                 $(this).attr("data-triggerd",'false')
                 $(this).parent().animate({
-                    left: -642 
+                    left: -$('#contact-now').width()  + (-10+$("#contactNW").width())
                 },200)
             }
         }
     })
+    console.log($("#contactNW").width() )
+    $("#contact-now").css(
+        'left',   -$('#contact-now').width()  + (-10+$("#contactNW").width())
+     )
 })
