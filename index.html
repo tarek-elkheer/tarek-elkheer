@@ -11,15 +11,18 @@
     <!--Js-->
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/main.js" async></script>
     <!--Font Awesome-->
     <script src="https://kit.fontawesome.com/7ad21de389.js" crossorigin="anonymous"></script>
 </head>
 <body >
-    <div id="loader">
+
+    <div id="loader" >
         <img src="images/logo.png"  width="400"  alt="">
     </div>
-    <div class="scroller"></div>
+    <div class="scroller"></div>        
+    <!--Pre nav-->
+     
     <div id="pre-nav" >
         <div id="social">
             <div class="phone" title="Phone"   style="display: flex; flex-direction: column; gap: 5px;">
@@ -58,6 +61,9 @@
             </div>
         </div>
     </div>
+    <!--Pre nav END-->
+
+    <!--Nav-->
     <nav>
         
         <div id="logo">
@@ -82,7 +88,95 @@
         <i class="fa-solid fa-list" style="color: #ffffff;"></i>
         </div>
     </nav>
+    <!--Nav END-->
 
+
+    <!--Curosel Start-->
+    <div class="carousel">
+            <div class="progress-bar progress-bar--primary hide-on-desktop">
+              <div class="progress-bar__fill"></div>
+            </div>
+          
+          <header class="main-post-wrapper">
+            
+            <div class="slides">
+              <article class="main-post main-post--active">
+                <div class="main-post__image">
+                  <img src="images/2.jpg" />
+                </div>
+                <div class="main-post__content">
+                    <h1 class="main-post__title">
+                        إحدى فعاليات المؤسسة
+                    </h1>
+                    <div class="main-post__tag-wrapper">
+                      <span class="main-post__tag"></span>
+                    </div>
+                  
+                </div>
+              </article>
+              <article class="main-post main-post--not-active">
+                <div class="main-post__image">
+                  <img src="images/4.jpg" />
+                </div>
+                <div class="main-post__content">
+                    <h1 class="main-post__title">شنط طارق الخير</h1>
+                    <div class="main-post__tag-wrapper">
+                    <span class="main-post__tag"></span>
+                    </div>
+                
+                </div>
+              </article>
+              <article class="main-post main-post--not-active">
+                <div class="main-post__image">
+                  <img src="images/Untitled.jpg"   style="object-fit: contain !important;" />
+                </div>
+                <div class="main-post__content">
+                  <div class="main-post__tag-wrapper">
+                    
+                  </div>
+                  <h1 class="main-post__title">
+                  </h1>
+                  
+                </div>
+              </article>
+            </div>
+          </header>
+          
+          <div class="posts-wrapper hide-on-mobile">
+            <article class="post post--active">
+              <div class="progress-bar">
+                <div class="progress-bar__fill"></div>
+              </div>
+              <header class="post__header">
+                <span class="post__tag">News</span>
+                <p class="post__published">16 August 2019</p>
+              </header>
+              <h2 class="post__title">New McLaren wind tunnel 'critical' to future performance, says Tech Director Key</h2>
+            </article>
+            <article class="post">
+              <div class="progress-bar">
+                <div class="progress-bar__fill"></div>
+              </div>
+              <header class="post__header">
+                <span class="post__tag">Video</span>
+                <p class="post__published">12 August 2019</p>
+              </header>
+              <h2 class="post__title">What To Watch For in the 2019 Hungarian Grand Prix</h2>
+            </article>
+            <article class="post">
+              <div class="progress-bar">
+                <div class="progress-bar__fill"></div>
+              </div>
+              <header class="post__header">
+                <span class="post__tag">News</span>
+                <p class="post__published">08 August 2019</p>
+              </header>
+              <h2 class="post__title">Hamilton wants harder championship fight from Leclerc and Verstappen
+              </h2>
+            </article>
+          </div>
+        </div>
+    <!--Curosel End-->
 <script>window.gtranslateSettings = {"default_language":"ar","languages":["ar","fr","de","en"],"wrapper_selector":".gtranslate_wrapper"}</script>
 <script src="https://cdn.gtranslate.net/widgets/latest/popup.js" defer></script>
 </body>
