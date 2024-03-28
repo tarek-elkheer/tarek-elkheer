@@ -461,10 +461,10 @@ body {
 /*Contact now*/
 #contact-now {
     visibility: hidden;
-        position: fixed;
+        position: absolute;
         transition: 0.3s;
     bottom: 20px;
-   
+    left: -644px;
     font-size: 20px;
     font-weight: bold;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;

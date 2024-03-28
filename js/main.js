@@ -132,10 +132,11 @@ $(".progress-bar__fill").css("background-color","white")
             }
         }
         else {
+ 
             if ($(window).width() < 759) {
                 $(this).attr("data-triggerd",'false')
                 $(this).parent().animate({
-                    left: -$('#contact-now').width()  + (-10+$("#contactNW").width())
+                    left: -644
                 },200, function(){
                     
                     $(this).css("flex-direction",'row')
@@ -144,13 +145,10 @@ $(".progress-bar__fill").css("background-color","white")
             else {
                 $(this).attr("data-triggerd",'false')
                 $(this).parent().animate({
-                    left: -$('#contact-now').width()  + (-10+$("#contactNW").width())
+                    left: -644 
                 },200)
             }
         }
     })
-    console.log($("#contactNW").width() )
-    $("#contact-now").css(
-        'left',   -$('#contact-now').width()  + (-10+$("#contactNW").width())
-     )
+ 
 })
