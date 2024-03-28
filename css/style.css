@@ -489,8 +489,8 @@ body {
 #contact-now a {
     cursor: pointer;
     padding: 3px;
-    color: rgb(241 247 239);
-    background-color: rgb(0 0 0);
+    color: #fecc5c;
+ 
 }
 #contact-now i {
     color : white;
@@ -579,7 +579,7 @@ body {
 }
 #row-BANNER {
     flex-wrap: nowrap;
-
+    cursor: pointer;
 }
 @media (max-width : 902px) {
     #row-BANNER {

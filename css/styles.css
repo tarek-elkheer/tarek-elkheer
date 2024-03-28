@@ -323,7 +323,9 @@ button.donate_btn {
     margin: 0 auto;
     text-align: center;
 }
-
+.col-lg-4:nth-child(3) .box_main{
+    padding-bottom: 81px;
+}
 .read_bt a {
     width: 100%;
     float: left;
@@ -446,18 +448,23 @@ button.donate_btn {
 .volunteer_text {
     width: 100%;
     float: left;
-    font-size: 26px;
+    font-size: 28px;
     color: #fff;
     font-weight: bold;
     padding-top: 20px;
 }
 
+#join_btJOIN a:hover {
+    background-color: #120a78;
+}
 .lorem_text {
     width: 70%;
     margin: 0 auto;
-    font-size: 16px;
+    font-size: 25px;
     color: #fff;
     text-align: center;
+ 
+    line-height: 40px;
 }
 
 .join_bt {
@@ -502,8 +509,37 @@ button.donate_btn {
     width: 100%;
     float: left;
 }
+.about_text {
+    position: relative;
+}
 
+@media (max-width:680px){
+    .col-sm-8 {
+        margin: auto;
+        text-align: center;
+    }
+}
+.about_text span:first-child {
+    display: block;
+    font-size: 30px;
+    padding-bottom: 10px;
+    padding: 12px;
+    background-color: #f64646eb;;
+    border: 2px solid white;
+}
+.about_text span:nth-child(2) {
+    display: block;
+    line-height: 30px;
+    font-size: 20px;
+    background-color: #fff2f24a;
+    border: 1px solid #ebffeb;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    text-align: center;
+}
 .about_taital {
+    position: relative;
     width: 100%;
     float: left;
     font-size: 40px;
@@ -512,6 +548,15 @@ button.donate_btn {
     padding-top: 20px;
     font-weight: bold;
     font-family: 'Open Sans', sans-serif;
+}
+.about_taital:after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 4px;
+    background-color: #f64646;
+    left: 0;
+    bottom: 0;
 }
 
 .about_text {
@@ -1233,7 +1278,7 @@ input.address_text::placeholder {
 .about_taital {
     width: 100%;
     float: left;
-    font-size: 40px;
+    font-size: 55px;
     color: #ffffff;
     text-transform: uppercase;
     padding-top: 20px;
