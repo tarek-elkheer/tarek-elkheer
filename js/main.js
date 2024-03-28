@@ -27,24 +27,15 @@ function enableScroll() {
     //     $("body #loader").css("visibility",'hidden')
     // }, 5000);
  
-    // $("#more").on("click",function(){
-    //     $(this).css('display','block')
-    //     $("#options ").slideToggle(100)
-    //     $("#options").css("flex-direction","column")
+    $("#more").on("click",function(){
+        $(this).css('display','block')
+        $("#options ").slideToggle(100)
+        $("#options").css("flex-direction","column")
  
 
-    // })
+    })
 
-
-    // ScROLLER
-    let el = document.querySelector(".scroller");
-    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-
-    window.addEventListener("scroll", () => {
-    const scrollTop = document.documentElement.scrollTop;
-    el.style.width = `${(scrollTop / height) * 100}%`;
-    });
-
+ 
 
 
     //Curosel
@@ -97,4 +88,66 @@ $(".posts-wrapper * ").css("display","none")
 $(".progress-bar__fill").css("background-color","white")
     //Curosel -END
 
+
+
+    $(window).on("scroll",function() {
+        console.log($(this).scrollTop())
+        if ($(this).scrollTop() > 152 && $(this).width() < 1272) {
+            $(".LOGO").hide( )
+            $("nav").css({"position":"sticky","z-index":"999999","top" : "0", 
+                        "backdrop-filter":"blur(2px)"
+                        ,
+                        "background-color":"rgb(17 3 64 / 22%)"
+                        })
+        }
+        if ($(this).scrollTop() === 0) {
+            $("nav").css({"position":"relative", "background-color" :' #110340'})
+            $(".LOGO").show()
+        }
+        if ($(this).width() > 1272) {
+            $("nav").css({"position":"sticky","z-index":"999999","top" : "0" })
+        }
+
+        if ($(this).scrollTop() > 53 && !$(this).width() < 759 ) {
+            $("#contact-now").css("visibility",'visible')
+        }
+        console.log($(this).width())
+        if ($(this).scrollTop() < 53  &&  !$(this).width() < 759 ) {
+            $("#contact-now").css("visibility",'hidden')
+        }
+    })
+    $("#contactNW").on("click",function() {
+        if ($(this).attr('data-triggerd') === 'false') {
+            if ($(window).width() < 759) {
+                $(this).parent().css("flex-direction",'column')
+                $(this).attr("data-triggerd",'true')
+                $(this).parent().animate({
+                    left : 0
+                },200)
+            }
+            else {
+                $(this).attr("data-triggerd",'true')
+                $(this).parent().animate({
+                    left : 0
+                },200)
+            }
+        }
+        else {
+            if ($(window).width() < 759) {
+                $(this).attr("data-triggerd",'false')
+                $(this).parent().animate({
+                    left: -642 
+                },200, function(){
+                    
+                    $(this).css("flex-direction",'row')
+                })
+            }
+            else {
+                $(this).attr("data-triggerd",'false')
+                $(this).parent().animate({
+                    left: -642 
+                },200)
+            }
+        }
+    })
 })
