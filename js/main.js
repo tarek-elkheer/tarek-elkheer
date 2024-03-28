@@ -123,12 +123,14 @@ $(".progress-bar__fill").css("background-color","white")
                 $(this).parent().animate({
                     left : 0
                 },200)
+                $("#GMAIL-CONTACT a").css("visibility",'visible')
             }
             else {
                 $(this).attr("data-triggerd",'true')
                 $(this).parent().animate({
                     left : 0
                 },200)
+                $("#GMAIL-CONTACT a").css("visibility",'visible')
             }
         }
         else {
@@ -141,12 +143,14 @@ $(".progress-bar__fill").css("background-color","white")
                     
                     $(this).css("flex-direction",'row')
                 })
+                $("#GMAIL-CONTACT a").css("visibility",'hidden')
             }
             else {
                 $(this).attr("data-triggerd",'false')
                 $(this).parent().animate({
                     left: -644 
                 },200)
+                $("#GMAIL-CONTACT a").css("visibility",'hidden')
             }
         }
     })

@@ -461,7 +461,7 @@ body {
 /*Contact now*/
 #contact-now {
     visibility: hidden;
-        position: absolute;
+        position:fixed;
         transition: 0.3s;
     bottom: 20px;
     left: -644px;
@@ -482,6 +482,9 @@ body {
 #contact-now span:last-child {
     font-size: 28px;
     cursor: pointer;
+}
+#GMAIL-CONTACT a{
+   visibility: hidden;
 }
 #contact-now a {
     cursor: pointer;
