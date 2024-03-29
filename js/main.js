@@ -21,10 +21,11 @@ function enableScroll() {
 // Set a timeout to re-enable scrolling after one minute
 // setTimeout(enableScroll, 5000);
 
-    $("body *:not('#loader, #loader img,#contactNW,#contact-now')").css("visibility",'hidden')
+    $("body *:not('#loader, #loader img')").css("visibility",'hidden')
     setTimeout(() => {
-        $("body *:not('#loader, #loader img,#contactNW,#contact-now')").css("visibility",'visible')
+        $("body *:not('#loader, #loader img')").css("visibility",'visible')
         $("body #loader").css("visibility",'hidden')
+        $("#GMAIL-CONTACT a").css("visibility",'hidden')
     }, 5000);
  
     $("#more").on("click",function(){
@@ -91,7 +92,6 @@ $(".progress-bar__fill").css("background-color","white")
 
 
     $(window).on("scroll",function() {
-        console.log($(this).scrollTop())
         if ($(this).scrollTop() > 152 && $(this).width() < 1272) {
             $(".LOGO").hide( )
             $("nav").css({"position":"sticky","z-index":"999999","top" : "0", 
@@ -109,10 +109,10 @@ $(".progress-bar__fill").css("background-color","white")
         }
 
         if ($(this).scrollTop() > 53 && !$(this).width() < 759 ) {
-            $("#contact-now").css("visibility",'visible')
+            $("#contact-now").css("display",'flex')
         }
         if ($(this).scrollTop() < 53  &&  !$(this).width() < 759 ) {
-            $("#contact-now").css("visibility",'hidden')
+            $("#contact-now").css("display",'none')
         }
         if ($(this).scrollTop() > 152 && !$(this).width() < 1272) {
             $(".LOGO").hide( )
