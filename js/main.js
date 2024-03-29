@@ -91,7 +91,7 @@ $(".progress-bar__fill").css("background-color","white")
 
 
     $(window).on("scroll",function() {
-
+        console.log($(this).scrollTop())
         if ($(this).scrollTop() > 152 && $(this).width() < 1272) {
             $(".LOGO").hide( )
             $("nav").css({"position":"sticky","z-index":"999999","top" : "0", 
@@ -113,6 +113,15 @@ $(".progress-bar__fill").css("background-color","white")
         }
         if ($(this).scrollTop() < 53  &&  !$(this).width() < 759 ) {
             $("#contact-now").css("visibility",'hidden')
+        }
+        if ($(this).scrollTop() > 152 && !$(this).width() < 1272) {
+            $(".LOGO").hide( )
+            $("nav").css({"position":"sticky","z-index":"999999","top" : "0", 
+                        "backdrop-filter":"blur(2px)"
+                        ,
+                        "background-color":"rgb(17 3 64 / 22%)"
+                        })
+ 
         }
     })
     $("#contactNW").on("click",function() {
@@ -154,5 +163,26 @@ $(".progress-bar__fill").css("background-color","white")
             }
         }
     })
+
+    //Li navigation to links
+    $( ' body').on("click",".nav-ul li:first-child",function(){
  
+        $('html, body').animate({scrollTop: $(".about_section").offset().top -100},100)
+    })
+    $( ' body').on("click",".nav-ul li:nth-child(2)",function(){
+ 
+        $('html, body').animate({scrollTop: $(".banner_section").offset().top -100},100)
+    })
+    
+
+    // Sponsers Banner
+    const root = document.documentElement;
+    const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
+    const marqueeContent = document.querySelector("ul.marquee-content");
+
+    root.style.setProperty("--marquee-elements", marqueeContent.children.length);
+
+    for(let i=0; i<marqueeElementsDisplayed; i++) {
+    marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
+}
 })
