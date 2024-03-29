@@ -967,6 +967,7 @@ button.donate_btn {
 /* donate section start */
 
 .donate_section {
+    position: relative;
     width: 100%;
     float: left;
     background-image: url(../images/donate-bg.png);
@@ -974,6 +975,15 @@ button.donate_btn {
     background-repeat: no-repeat;
     background-size: 100%;
     padding-bottom: 90px;
+}
+.donate_section:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    bottom: -100px;
+    left: 0;
+    background-color: #fcca5b;
 }
 
 .donate_taital {

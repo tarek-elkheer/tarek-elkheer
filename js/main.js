@@ -21,11 +21,11 @@ function enableScroll() {
 // Set a timeout to re-enable scrolling after one minute
 // setTimeout(enableScroll, 5000);
 
-    // $("body *:not('#loader, #loader img')").css("visibility",'hidden')
-    // setTimeout(() => {
-    //     $("body *:not('#loader, #loader img')").css("visibility",'visible')
-    //     $("body #loader").css("visibility",'hidden')
-    // }, 5000);
+    $("body *:not('#loader, #loader img,#contactNW,#contact-now')").css("visibility",'hidden')
+    setTimeout(() => {
+        $("body *:not('#loader, #loader img,#contactNW,#contact-now')").css("visibility",'visible')
+        $("body #loader").css("visibility",'hidden')
+    }, 5000);
  
     $("#more").on("click",function(){
         $(this).css('display','block')
@@ -185,4 +185,22 @@ $(".progress-bar__fill").css("background-color","white")
     for(let i=0; i<marqueeElementsDisplayed; i++) {
     marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
 }
+
+// Nav click handle 
+    $(".nav-ul li,.sharenow").on("click",function() {
+
+        if ($(window).width() < 1258) {
+            setTimeout(() => {
+                
+                $("#options").css("display",'none')
+            }, 200);
+        }
+    })
+
+// FOOTER
+  var date = new Date()
+ 
+          $(function(){
+            $(".copyright_text").html(date.getFullYear()+' All Rights Reserved. Copyrights @ <a href="https://tarek-elkheer.github.io/tarek-elkheer/">Tarek ELKheer</a>')
+          })
 })
