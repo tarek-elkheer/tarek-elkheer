@@ -22,7 +22,7 @@
 <body    alink="green"  ondragstart="return false" onselectstart="return false">
 
     <div id="loader" style="z-index: 99999999999999999999999999999;" >
-        <img src="images/logo.png"  width="400"  alt="">
+        <div    id="LOADER" alt=""> </div>
     </div>       
     <!--Pre nav-->
 
@@ -71,7 +71,7 @@
         
         <div id="logo">
             <a href="https://tarek-elkheer.github.io/tarek-elkheer/">
-                <img src="images/logo.png" loading="lazy" class="LOGO" alt="">
+                <img src="images/logo.png"  loading='eager' loading="lazy" class="LOGO" alt="">
             </a>
         </div>
         
@@ -93,6 +93,36 @@
     </nav>
     <!--Nav END-->
 
+
+    <!--Donate-OPTION-CONTAINER-->
+    <div id="container-hide-all"></div>
+    <div id="donate-option-container">
+        <span id="hide-donation-cont">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAACIUlEQVRoQ+2YS0oDQRCG+7EXBBUXIROXbgSNxgOo6AUUPEmuoDdRT5CFujZiELxAkiErI6hrTbc1YQLJ0M5Uv8YEO+vp6v/7a6qmKpQs+I8uuH4SAP46gyEDIQOWDoRXyNJA6+P/KwPtKNrgUl6CbcepdS3OWHO71+uZWOkiHjoD6WUPIHRtRiylQzoaHdYHgxcdiE6lsiU5vyVSrmbOvYIp+1hT0ABP1eoNXHT6i8g3KsQBFmIsnrE7iLWiikcpvar3++cYQ3QAPiHgUk5QFESR+DT+x24cL5cNkNyXC4EUn8TxAnANgc8QrighNMQTL6/Qc61WG0n5qCg6FdMMhI54UD9kjO3tdLt9hFl643QnijallPcQeB0R/B0K7IgI8ZVXsLYdDV3Ek4u03ISaSM8pu03GBFQTyBqnDZAE0MxEcbIMvyVJYCMApxAW4q0AnEBYircGsIJwIN4JgBGEI/HuAApmG0UVj1tsPY47xRWe/4RxERu21Wk1TiCsADS/CSorrSGMARyInwBZQRgBOBRvDaENoCl+vkYJLfFpqyScf+kOgDrdCZ2B8U5MSLuMcZpT2ih7J57uMPO50MBSX7QTJxBzvVIWAaDmeWQdlb4To8Rjv97+dmIh2iDC+x9bjPOGl504Wey/hbiA1nWSuCkJaXHOm9jLsrOEi3joNmo7Nfo6HwB8OYuNGzKAdcrXcyEDvpzFxg0ZwDrl67mFz8AP4yRuQIeRZ14AAAAASUVORK5CYII=" alt="">
+        </span>
+            
+ 
+
+            <img src="data:image/png;base64,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">
+            <h1 style="font-weight: bold;">للتبرع</h1>
+ 
+
+        <div class="option-donation">
+            <div>
+                <div class="colmn-card">
+                    <img  src="images/instapay.png" loading="eager" alt="">
+                    <img  src="images/vodacash.png" loading="eager" alt="">
+                    <p>+20 100 148 4 372</p>
+                </div>
+                
+            </div>
+
+            <div></div>
+        </div>
+
+
+    </div>
+    <!--Donate-OPTION-CONTAINER -END -->
 
     <!--Curosel Start-->
     <div class="carousel">
@@ -205,7 +235,7 @@
     <!--Contact -End-->
 
         <!--Banner-->
-        <div class="banner_section layout_padding" >
+        <div class="banner_section layout_padding" id="banner_section" >
         <div class="fundraise_section">
             <div class="fundraise_section_main">
                <div class="row" id="row-BANNER" >
@@ -225,7 +255,7 @@
 </h4>
                         <p class="lorem_text">انضم إلى مهمتنا لإحداث فرق! إن جهودكم في جمع التبرعات تمكننا من مواصلة عملنا الحيوي. ابدأ حملتك اليوم وكن منارة أمل
 </p>
-                        <div class="join_bt" id="join_btJOIN"><a href="#" style="font-size: 20px;">شارك الآن</a></div>
+                        <div class="join_bt" id="join_btJOIN"><a href="#" style="font-size: 34px;">شارك الآن</a></div>
                      </div>
                   </div>
                   <div class="col-lg-4">
@@ -246,7 +276,7 @@
         <!--Banner -END-->
 
     <!-- about section start -->
-      <div class="about_section layout_padding">
+      <div class="about_section layout_padding" id="about_section">
          <div class="container">
             <div >
                <div class="col-sm-8" id="col-sm-FORABOUT">
@@ -358,9 +388,9 @@
                      <div class="footer_menu_left">
                         <div class="footer_menu">
                            <ul >
-                              <li><a href="#">عن المؤسسة</a></li>
-                              <li><a href="#">الأنشطة الحالية</a></li>
-                              <li><a href="#">إشترك الآن</a></li>
+                              <li><a href="#about_section">عن المؤسسة</a></li>
+                              <li><a href="#banner_section">الأنشطة الحالية</a></li>
+                              <li id="donate-footer-option" style="cursor: pointer;">شارك الآن </li>
                            </ul>
                            
                         </div>

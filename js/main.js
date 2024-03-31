@@ -1,4 +1,12 @@
 $(function(){
+    $("#hide-donation-cont").on("click",function() {
+        $("#container-hide-all").hide()
+        $(this).parent().hide()
+    })
+    $("#join_btJOIN,#donate-footer-option,.sharenow").on("click",function(){
+        $("#container-hide-all,#donate-option-container").show()
+    })
+
     function disableScroll() {
   // Save the current scroll position
   var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -21,9 +29,9 @@ function enableScroll() {
 // Set a timeout to re-enable scrolling after one minute
 // setTimeout(enableScroll, 5000);
 
-    $("body *:not('#loader, #loader img')").css("visibility",'hidden')
+    $("body *:not('#loader, #loader #LOADER')").css("visibility",'hidden')
     setTimeout(() => {
-        $("body *:not('#loader, #loader img')").css("visibility",'visible')
+        $("body *:not('#loader, #loader #LOADER')").css("visibility",'visible')
         $("body #loader").css("visibility",'hidden')
         $("#GMAIL-CONTACT a").css("visibility",'hidden')
     }, 5000);
@@ -165,6 +173,9 @@ $(".progress-bar__fill").css("background-color","white")
     })
 
     //Li navigation to links
+    $("#join_btJOIN a").on("click",function(e) {
+        e.preventDefault()
+    })
     $( ' body').on("click",".nav-ul li:first-child",function(){
  
         $('html, body').animate({scrollTop: $(".about_section").offset().top -100},100)
