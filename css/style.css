@@ -38,7 +38,7 @@
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-name: loader;
-    background-image: url("../images/logo.png");
+    background-image: url("../images/logo.WebP");
     background-size:100%  ;
     background-repeat: no-repeat;
   background-position: center;
