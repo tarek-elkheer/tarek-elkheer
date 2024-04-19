@@ -21,6 +21,14 @@
   font-variation-settings:
     "slnt" 0;
 }
+.about_text span:nth-child(2){
+  font-family: "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 627;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+}
 .lorem_text {
   font-family: "Cairo", sans-serif;
   font-optical-sizing: auto;
